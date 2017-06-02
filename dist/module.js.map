@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/module.js"],"names":["LogPanelCtrl"],"mappings":";;;;;;;;AAAQA,kB,SAAAA,Y;;;2BAGNA,Y","file":"module.js","sourcesContent":["import {LogPanelCtrl} from  './ctrl';\n\nexport {\n  LogPanelCtrl as PanelCtrl\n};\n"]}

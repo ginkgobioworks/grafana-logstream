@@ -1,0 +1,23 @@
+{
+  "name": "logstream-panel",
+  "description": "Streaming log panel for Grafana",
+  "main": "",
+  "authors": [
+    "Chris Mitchell <chris@ginkgobioworks.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "grafana logs"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

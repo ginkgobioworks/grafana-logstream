@@ -1,0 +1,10 @@
+<div ng-if="ctrl.dataLoaded" class="logstream-container">
+  <div class="logstream-display">
+    <textarea id="logstream-display-{{ctrl.panel.id}}">
+
+    </textarea>
+  </div>
+  <div>
+    <button ng-click="ctrl.tail = !ctrl.tail" class="btn btn-primary" >Toggle Tail</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+{
+    "type": "panel",
+    "name": "Logstream Panel",
+    "id": "logstream-panel",
+    "info": {
+        "description": "Logging panel for Grafana",
+        "author": {
+            "name": "Chris Mitchell",
+            "url": "https://github.com/chris7"
+        },
+        "keywords": ["logging", "panel"],
+        "version": "0.0.1",
+        "updated": "2016-12-10"
+    },
+
+    "dependencies": {
+        "grafanaVersion": "3.x.x",
+        "plugins": []
+    }
+}
