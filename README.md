@@ -43,7 +43,8 @@ Then browse to http://localhost:3000
 
 #### Acknowledgements
 
-This panel is based on the "Datatable" panel by [Brian Gann](https://github.com/briangann/grafana-datatable-panel)
+The source code from the "Datatable" panel by [Brian Gann](https://github.com/briangann/grafana-datatable-panel) was a great reference
+for setting up this plugin.
 
 #### Changelog
 
