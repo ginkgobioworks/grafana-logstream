@@ -3,14 +3,14 @@
     "name": "Logstream Panel",
     "id": "logstream-panel",
     "info": {
-        "description": "Logging panel for Grafana",
+        "description": "A streaming log panel for Grafana",
         "author": {
-            "name": "Chris Mitchell",
-            "url": "https://github.com/chris7"
+            "name": "Ginkgo Bioworks",
+            "url": "https://github.com/ginkgobioworks/grafana-logstream"
         },
         "keywords": ["logging", "panel"],
         "version": "0.0.1",
-        "updated": "2016-12-10"
+        "updated": "2017-06-02"
     },
 
     "dependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "logstream-panel",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Grafana Log Panel",
   "main": "module.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.ginkgobioworks.com/chris/grafana-logstream.git"
+    "url": "git+https://github.com/ginkgobioworks/grafana-logstream.git"
   },
   "author": "Chris Mitchell",
   "license": "MIT",
@@ -43,5 +43,5 @@
     "typescript": "^2.0.10"
   },
   "dependencies": {},
-  "homepage": "https://git.ginkgobioworks.com/chris/grafana-logstream"
+  "homepage": "https://github.com/ginkgobioworks/grafana-logstream"
 }
