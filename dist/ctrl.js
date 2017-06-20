@@ -113,7 +113,7 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
       _export('LogPanelCtrl', LogPanelCtrl = function (_MetricsPanelCtrl) {
         _inherits(LogPanelCtrl, _MetricsPanelCtrl);
 
-        function LogPanelCtrl($scope, $injector, $http, $location, uiSegmentSrv, annotationsSrv) {
+        function LogPanelCtrl($scope, $injector, uiSegmentSrv, annotationsSrv) {
           _classCallCheck(this, LogPanelCtrl);
 
           var _this2 = _possibleConstructorReturn(this, (LogPanelCtrl.__proto__ || Object.getPrototypeOf(LogPanelCtrl)).call(this, $scope, $injector));
@@ -171,7 +171,6 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
           _.defaults(_this2.panel, panelDefaults);
 
           _this2.dataLoaded = true;
-          _this2.http = $http;
           _this2.tail = true;
           _this2.events.on('data-received', _this2.onDataReceived.bind(_this2));
           _this2.events.on('data-error', _this2.onDataError.bind(_this2));
@@ -189,7 +188,6 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
             $tailBtn.click(function (evt) {
               _this.tail = !_this.tail;
             });
-            console.log('tail is', _this.tail);
           }
         }, {
           key: 'onInitEditMode',
@@ -203,21 +201,6 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
             this.addEditorTab('Options', optionsPath, 2);
           }
         }, {
-          key: 'getPanelPath',
-          value: function getPanelPath() {
-            var panels = grafanaBootData.settings.panels;
-            var thisPanel = panels[this.pluginId];
-            // the system loader preprends publib to the url, add a .. to go back one level
-            var thisPanelPath = '../' + thisPanel.baseUrl + '/';
-            return thisPanelPath;
-          }
-        }, {
-          key: 'issueQueries',
-          value: function issueQueries(datasource) {
-            this.pageIndex = 0;
-            return _get(LogPanelCtrl.prototype.__proto__ || Object.getPrototypeOf(LogPanelCtrl.prototype), 'issueQueries', this).call(this, datasource);
-          }
-        }, {
           key: 'onDataError',
           value: function onDataError(err) {
             this.dataRaw = [];
@@ -226,17 +209,18 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
         }, {
           key: 'tailScroll',
           value: function tailScroll() {
-            var $logger = $('#logstream-display-' + this.panel.id);
-            var height = $logger.get(0).scrollHeight;
-            $logger.animate({
-              scrollTop: height
-            }, 500);
+            var $logger = $('#logstream-display-' + this.panel.id).get(0);
+            if ($logger) {
+              $logger.animate({
+                scrollTop: $logger.scrollHeight
+              }, 500);
+            }
           }
         }, {
           key: 'onDataReceived',
           value: function onDataReceived(dataList) {
             this.dataRaw = dataList;
-
+            // TODO: If we ever support other modes, detect the proper transform
             this.panel.transform = 'json';
             this.render();
           }

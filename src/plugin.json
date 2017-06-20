@@ -1,7 +1,7 @@
 {
     "type": "panel",
     "name": "Logstream Panel",
-    "id": "logstream-panel",
+    "id": "ginkgobioworks-logstream-panel",
     "info": {
         "description": "A streaming log panel for Grafana",
         "author": {
