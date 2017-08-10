@@ -1,0 +1,26 @@
+{
+    "type": "panel",
+    "name": "Logstream Panel",
+    "id": "ginkgobioworks-logstream-panel",
+    "info": {
+        "description": "A streaming log panel for Grafana",
+        "author": {
+            "name": "Ginkgo Bioworks",
+            "url": "http://www.ginkgobioworks.com/"
+        },
+        "keywords": ["logging", "panel"],
+        "version": "0.0.1",
+        "updated": "2017-06-02",
+        "screenshots": [
+            {"name": "Showcase", "path": "src/img/logstream-example.png"}
+        ],
+        "links": [
+            {"name": "Project Site", "url": "https://github.com/ginkgobioworks/grafana-logstream"}
+        ]
+    },
+
+    "dependencies": {
+        "grafanaVersion": "3.x.x",
+        "plugins": []
+    }
+}
