@@ -12,7 +12,7 @@
         "version": "0.0.1",
         "updated": "2017-06-02",
         "screenshots": [
-            {"name": "Showcase", "path": "src/img/logstream-example.png"}
+            {"name": "Showcase", "path": "img/logstream-example.png"}
         ],
         "links": [
             {"name": "Project Site", "url": "https://github.com/ginkgobioworks/grafana-logstream"}
