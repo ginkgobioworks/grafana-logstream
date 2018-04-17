@@ -108,11 +108,7 @@ export class LogPanelCtrl extends MetricsPanelCtrl {
 
 
   onInitPanel() {
-    var $tailBtn = $('#logstream-tail-btn-' + this.panel.id);
-    var _this = this;
-    $tailBtn.click(function (evt) {
-      _this.tail = !_this.tail;
-    });
+
   }
 
   // setup the editor
