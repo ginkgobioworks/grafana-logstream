@@ -9,8 +9,8 @@
             "url": "http://www.ginkgobioworks.com/"
         },
         "keywords": ["logging", "panel"],
-        "version": "0.0.1",
-        "updated": "2017-06-02",
+        "version": "0.0.2",
+        "updated": "2018-04-10",
         "screenshots": [
             {"name": "Showcase", "path": "img/logstream-example.png"}
         ],
@@ -20,7 +20,7 @@
     },
 
     "dependencies": {
-        "grafanaVersion": "3.x.x",
+        "grafanaVersion": "5.x.x",
         "plugins": []
     }
 }

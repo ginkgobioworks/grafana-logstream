@@ -182,13 +182,7 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
 
         _createClass(LogPanelCtrl, [{
           key: 'onInitPanel',
-          value: function onInitPanel() {
-            var $tailBtn = $('#logstream-tail-btn-' + this.panel.id);
-            var _this = this;
-            $tailBtn.click(function (evt) {
-              _this.tail = !_this.tail;
-            });
-          }
+          value: function onInitPanel() {}
         }, {
           key: 'onInitEditMode',
           value: function onInitEditMode() {
@@ -243,26 +237,9 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
         }, {
           key: 'getPanelHeight',
           value: function getPanelHeight() {
-            // panel can have a fixed height via options
-            var tmpPanelHeight = this.$scope.ctrl.panel.height;
-            // if that is blank, try to get it from our row
-            if (typeof tmpPanelHeight === 'undefined') {
-              // get from the row instead
-              tmpPanelHeight = this.row.height;
-              // default to 250px if that was undefined also
-              if (typeof tmpPanelHeight === 'undefined') {
-                tmpPanelHeight = 250;
-              }
-            } else {
-              // convert to numeric value
-              tmpPanelHeight = tmpPanelHeight.replace("px", "");
-            }
-            var actualHeight = parseInt(tmpPanelHeight);
-            // grafana minimum height for a panel is 250px
-            if (actualHeight < 250) {
-              actualHeight = 250;
-            }
-            return actualHeight;
+            var tmpPanelHeight = this.panel.height || String(this.height);
+            tmpPanelHeight = tmpPanelHeight.replace("px", "");
+            return parseInt(tmpPanelHeight);
           }
         }, {
           key: 'link',

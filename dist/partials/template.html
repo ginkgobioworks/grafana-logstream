@@ -3,8 +3,8 @@
     <textarea id="logstream-display-{{ctrl.panel.id}}">
 
     </textarea>
-  </div>
-  <div>
-    <button ng-click="ctrl.tail = !ctrl.tail" class="btn btn-primary" >Toggle Tail</button>
+    <div>
+      <button ng-bind="ctrl.tail ? 'Tail Enabled' : 'Tail Disabled'" ng-click="ctrl.tail = !ctrl.tail" class="btn btn-primary tail active"></button>
+    </div>
   </div>
 </div>
