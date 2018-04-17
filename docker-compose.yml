@@ -1,8 +1,8 @@
 grafana:
-  image: grafana/grafana
+  image: grafana/grafana:latest
   ports:
     - "3000:3000"
   volumes:
-    - ./dist:/var/lib/grafana/plugins/logstream-panel
+    - ./dist:/var/lib/grafana/plugins/ginkgobioworks-logstream-panel
   environment:
     - TERM=linux
