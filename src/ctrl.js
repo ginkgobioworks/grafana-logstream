@@ -128,10 +128,10 @@ export class LogPanelCtrl extends MetricsPanelCtrl {
   }
 
   tailScroll() {
-    var $logger = $('#logstream-display-' + this.panel.id).get(0);
-    if ($logger) {
-      $logger.animate({
-          scrollTop: $logger.scrollHeight
+    var logger = $('#logstream-display-' + this.panel.id).get(0);
+    if (logger) {
+      $(logger).animate({
+          scrollTop: logger.scrollHeight
       }, 500);
     }
 
