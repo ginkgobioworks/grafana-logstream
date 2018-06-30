@@ -203,10 +203,10 @@ System.register(['app/plugins/sdk', 'jquery', 'angular', 'app/core/utils/kbn', '
         }, {
           key: 'tailScroll',
           value: function tailScroll() {
-            var $logger = $('#logstream-display-' + this.panel.id).get(0);
-            if ($logger) {
-              $logger.animate({
-                scrollTop: $logger.scrollHeight
+            var logger = $('#logstream-display-' + this.panel.id).get(0);
+            if (logger) {
+              $(logger).animate({
+                scrollTop: logger.scrollHeight
               }, 500);
             }
           }
